@@ -11,7 +11,7 @@ public class ProfessorVitalicio extends Professor{
 	public double calcularSalario() {
 		double salario = getSalario();
 		
-		if(getTitulacao() == "DOUTORADO") {
+		if(getTitulacao().equals("DOUTORADO")) {
 			salario += salario*20/100;
 		}
 		

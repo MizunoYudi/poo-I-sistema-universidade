@@ -17,7 +17,7 @@ public class ProfessorRepository {
 	
 	public Professor getByMatricula(String matricula) {
 		for(Professor prof : professores) {
-			if(prof.getMatricula() == matricula) {
+			if(prof.getMatricula().equals(matricula)) {
 				return prof;
 			}
 		}

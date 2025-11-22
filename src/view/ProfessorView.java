@@ -99,6 +99,7 @@ public class ProfessorView {
 	
 	public void listarProfessores(List<Professor> profs) {
 		for(Professor prof : profs) {
+			System.out.print("\n");
 			if(prof instanceof ProfessorVitalicio) {
 				this.DadosProf((ProfessorVitalicio) prof);
 			} else {

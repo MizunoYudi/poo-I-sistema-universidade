@@ -119,4 +119,9 @@ public class ProfessorView {
 		System.out.print("Digite a matricula do professor que deseja remover: ");
 		return sc.nextLine();
 	}
+	
+	public String exibirSalario() {
+		System.out.print("Digite a matricula do professor que deseja consultar o salario: ");
+		return sc.nextLine();
+	}
 }

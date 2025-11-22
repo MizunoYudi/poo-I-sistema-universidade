@@ -16,6 +16,10 @@ public abstract class Professor {
 		this.salario = salario;
 		this.dataContrato = dataContrato;
 	}
+	
+	public double calcularSalario() {
+		return salario;
+	}
 
 	public String getNome() {
 		return nome;

@@ -11,6 +11,7 @@ public class ProfessorView {
 	private Scanner sc = new Scanner(System.in);
 		
 	public ProfessorVitalicio lerDadosProfessorVitalicio(){
+		System.out.print("\n");
 		System.out.print("Digite o nome:");
 		String nome = sc.nextLine();
 		
@@ -39,6 +40,7 @@ public class ProfessorView {
 	}
 	
 	public ProfessorSubstituto lerDadosProfessorSubstituto(){
+		System.out.print("\n");
 		System.out.print("Digite o nome:");
 		String nome = sc.nextLine();
 		
@@ -98,11 +100,14 @@ public class ProfessorView {
 	}
 	
 	public void listarProfessores(List<Professor> profs) {
+		System.out.println("Professores: ");
 		for(Professor prof : profs) {
 			System.out.print("\n");
 			if(prof instanceof ProfessorVitalicio) {
+				System.out.println("Professore Vitalício: ");
 				this.DadosProf((ProfessorVitalicio) prof);
 			} else {
+				System.out.println("Professor Substituo: ");
 				this.DadosProf((ProfessorSubstituto) prof);
 			}
 		}

@@ -9,16 +9,14 @@ public class Main {
 		ProfessorRepository profRep = new ProfessorRepository();
 		ProfessorView profVw = new ProfessorView();
 		ProfessorController profCtr = new ProfessorController(profRep, profVw);
+		AlunoRepository alRep = new AlunoRepository();
+		AlunoView alVw = new AlunoView();
+		AlunoController alCtr = new AlunoController(alRep, alVw);
 		
-		profCtr.adicionarProfessor(profVw.lerDadosProfessorSubstituto());
-		System.out.println("\n");
-		profCtr.adicionarProfessor(profVw.lerDadosProfessorVitalicio());
-		System.out.println("\n");
-		profCtr.adicionarProfessor(profVw.lerDadosProfessorVitalicio());
-		System.out.println("\n");
-		profCtr.listarProfessores();
-		profCtr.removerProfessor();
-		System.out.println("\n");
-		profCtr.listarProfessores();
+		alCtr.adicionarAluno(alVw.lerDadosAluno());
+		alCtr.adicionarAluno(alVw.lerDadosAluno());
+		alCtr.listarAlunos();
+		alCtr.removerAluno();
+		alCtr.listarAlunos();
 	}
 }

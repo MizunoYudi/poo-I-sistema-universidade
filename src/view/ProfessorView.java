@@ -9,7 +9,7 @@ import java.time.LocalDate;
 
 public class ProfessorView {
 	private Scanner sc = new Scanner(System.in);
-	
+		
 	public ProfessorVitalicio lerDadosProfessorVitalicio(){
 		System.out.print("Digite o nome:");
 		String nome = sc.nextLine();

@@ -8,7 +8,7 @@ public class AlunoController {
 	private AlunoView vw = new AlunoView();
 	private AlunoRepository rep = new AlunoRepository();
 	
-	public AlunoController(AlunoView vw, AlunoRepository rep) {
+	public AlunoController(AlunoRepository rep, AlunoView vw) {
 		this.vw = vw;
 		this.rep = rep;
 	}
@@ -21,8 +21,8 @@ public class AlunoController {
 		vw.listarAlunos(rep.listar());
 	}
 	
-	public void removerAluno(Aluno al) {
-		rep.rmv(al);
+	public void removerAluno() {
+		Aluno aluno = rep.getByCpf(vw.removerAluno());
+		rep.rmv(aluno);
 	}
-	
 }

@@ -8,7 +8,11 @@ public class ProfessorRepository {
 	private List<Professor> professores = new ArrayList<>();
 	
 	public void add(Professor prof) {
-		professores.add(prof);
+		if(getByMatricula(prof.getMatricula()) == null) {
+			professores.add(prof);			
+		} else {
+			//Implementar Erro
+		}
 	}
 	
 	public void rmv(Professor prof) {

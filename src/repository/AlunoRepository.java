@@ -8,7 +8,11 @@ public class AlunoRepository {
 	private List<Aluno> alunos = new ArrayList<>();
 	
 	public void add(Aluno al) {
-		alunos.add(al);
+		if(getByCpf(al.getCpf()) == null) {
+			alunos.add(al);			
+		} else {
+			//Implementar Erro
+		}
 	}
 	
 	public void rmv(Aluno al) {

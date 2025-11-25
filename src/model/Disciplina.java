@@ -44,14 +44,6 @@ public class Disciplina {
 		return alunos;
 	}
 
-	/* Removendo setter de alunos temporariamente por questão de segurança,
-	 * (garantindo que a lista de alunos não seja sobrescrita por outra lista).
-	
-	public void setAlunos(List<Aluno> alunos) {
-		this.alunos = alunos;
-	}
-	*/
-
 	public Professor getProfessor() {
 		return professor;
 	}

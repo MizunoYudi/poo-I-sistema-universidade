@@ -1,8 +1,12 @@
 package model;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class Aluno {
 	private String nome;
 	private String cpf;
+	private List<Disciplina> disciplinas = new ArrayList<>();
 	
 	public Aluno(String nome, String cpf) {
 		this.nome = nome;
@@ -23,5 +27,9 @@ public class Aluno {
 
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+	
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
 }

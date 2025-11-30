@@ -1,6 +1,8 @@
 package model;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.ArrayList;
 
 public abstract class Professor {
 	private String nome;
@@ -8,7 +10,9 @@ public abstract class Professor {
 	private String titulacao;
 	private double salario;
 	private LocalDate dataContrato;
+	private List<Disciplina> disciplinas = new ArrayList<>();
 	
+
 	public Professor(String nome, String matricula, String titulacao, double salario, LocalDate dataContrato) {
 		this.nome = nome;
 		this.matricula = matricula;
@@ -59,5 +63,9 @@ public abstract class Professor {
 
 	public void setDataContrato(LocalDate dataContrato) {
 		this.dataContrato = dataContrato;
+	}
+	
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
 }

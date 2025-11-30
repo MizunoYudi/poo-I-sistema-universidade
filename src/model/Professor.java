@@ -65,6 +65,7 @@ public abstract class Professor {
 		this.dataContrato = dataContrato;
 	}
 	
+	
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}

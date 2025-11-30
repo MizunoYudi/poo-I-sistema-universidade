@@ -3,6 +3,7 @@ package controller;
 import model.Disciplina;
 import model.DisciplinaObrigatoria;
 import model.DisciplinaEletiva;
+import model.Professor;
 import view.DisciplinaView;
 import repository.DisciplinaRepository;
 
@@ -15,12 +16,13 @@ public class DisciplinaController {
 		this.vw = vw;
 	}
 	
-	public void adicionarDisciplina(Disciplina d) {
+	public void adicionarDisciplina(Disciplina d, Professor p) {
 		if(d instanceof DisciplinaObrigatoria) {
 			rep.add((DisciplinaObrigatoria) d);
 		} else {
 			rep.add((DisciplinaEletiva) d);
 		}
+		d.setProfessor(p);
 	}
 	
 	public void listarDisciplinas() {

@@ -1,6 +1,7 @@
 package repository;
 
 import model.Aluno;
+import model.Disciplina;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -30,5 +31,13 @@ public class AlunoRepository {
 	
 	public List<Aluno> listar(){
 		return alunos;
+	}
+	
+	public void addDisciplina(Aluno al, Disciplina d) {
+		al.getDisciplinas().add(d);
+	}
+	
+	public void rmvDisciplina(Aluno al, Disciplina d) {
+		al.getDisciplinas().remove(d);
 	}
 }

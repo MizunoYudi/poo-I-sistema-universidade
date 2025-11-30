@@ -39,4 +39,11 @@ public class DisciplinaController {
 		//Implementar escolha de delecao das disciplinas quando ha alunos e professor matriculados
 		rep.rmv(d);
 	}
+	
+	public void removerDisciplinaProfessor() {
+		Disciplina d = rep.getByCodigo(vw.getCodigo());
+		if(vw.removerProfessor()) {
+			d.setProfessor(null);
+		}
+	}
 }

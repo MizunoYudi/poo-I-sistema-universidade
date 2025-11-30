@@ -63,4 +63,13 @@ public class DisciplinaView {
 		System.out.print("Digite o codigo da disciplina: ");
 		return sc.nextInt();
 	}
+	
+	public boolean removerProfessor() {
+		System.out.print("Deseja remover o professor da materia? [Digite s para remover]");
+		if(sc.nextLine().equals("s")) {
+			return true;
+		}
+		return false;
+		
+	}
 }

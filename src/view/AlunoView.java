@@ -31,6 +31,21 @@ public class AlunoView {
 		}
 	}
 	
+	public int matricularDisciplina() {
+		System.out.print("Digite o codigo da disciplina que deseja matricular o aluno: ");
+		return sc.nextInt();
+	}
+	
+	public int desmatricularDisciplina() {
+		System.out.print("Digite o codigo da disciplina que deseja desmatricular o aluno: ");
+		return sc.nextInt();
+	}
+	
+	public String getCPF() {
+		System.out.print("Digite o cpf do aluno: ");
+		return sc.nextLine();
+	}
+	
 	public String removerAluno() {
 		System.out.print("Digite o CPF do aluno: ");
 		return sc.nextLine();

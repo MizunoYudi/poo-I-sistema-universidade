@@ -58,4 +58,9 @@ public class DisciplinaView {
 			System.out.println(a.getNome());
 		}
 	}
+	
+	public int getCodigo() {
+		System.out.print("Digite o codigo da disciplina: ");
+		return sc.nextInt();
+	}
 }

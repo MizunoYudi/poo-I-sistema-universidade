@@ -36,4 +36,8 @@ public class ProfessorController {
 		Professor prof = rep.getByMatricula(vw.removerProfessor());
 		System.out.print(prof.getSalario());
 	}
+	
+	public Professor buscarPorMatricula() {
+		return rep.getByMatricula(vw.buscarPorMatricula());
+	}
 }

@@ -121,6 +121,11 @@ public class ProfessorView {
 	} 
 	*/
 	
+	public String buscarPorMatricula() {
+		System.out.print("Informe a matricula do professor: ");
+		return sc.nextLine();
+	}
+	
 	public String removerProfessor() {
 		System.out.print("Digite a matricula do professor que deseja remover: ");
 		return sc.nextLine();

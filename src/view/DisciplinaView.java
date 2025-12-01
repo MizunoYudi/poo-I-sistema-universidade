@@ -10,7 +10,7 @@ import model.DisciplinaEletiva;
 public class DisciplinaView {
 	private Scanner sc = new Scanner(System.in);
 	
-	public Disciplina lerDadosDisciplina() {
+	public DisciplinaObrigatoria lerDadosDisciplinaObrigatoria() {
 		System.out.print("\n");
 		System.out.print("Digite o nome da disciplina: ");
 		String nome = sc.nextLine();
@@ -22,7 +22,22 @@ public class DisciplinaView {
 		System.out.print("Digite a carga horaria do curso");
 		int cargaHoraria = sc.nextInt();
 		
-		return new Disciplina(nome, codigo, cargaHoraria);
+		return new DisciplinaObrigatoria(nome, codigo, cargaHoraria);
+	}
+	
+	public DisciplinaEletiva lerDadosDisciplinaEletiva() {
+		System.out.print("\n");
+		System.out.print("Digite o nome da disciplina: ");
+		String nome = sc.nextLine();
+		
+		System.out.print("Digite o codigo da disciplina: ");
+		int codigo = sc.nextInt();
+		
+		
+		System.out.print("Digite a carga horaria do curso");
+		int cargaHoraria = sc.nextInt();
+		
+		return new DisciplinaEletiva(nome, codigo, cargaHoraria);
 	}
 	
 	private void dadosDisciplina(DisciplinaObrigatoria d) {
@@ -59,17 +74,8 @@ public class DisciplinaView {
 		}
 	}
 	
-	public int getCodigo() {
+	public int buscarDisciplina() {
 		System.out.print("Digite o codigo da disciplina: ");
 		return sc.nextInt();
-	}
-	
-	public boolean removerProfessor() {
-		System.out.print("Deseja remover o professor da materia? [Digite s para remover]");
-		if(sc.nextLine().equals("s")) {
-			return true;
-		}
-		return false;
-		
 	}
 }

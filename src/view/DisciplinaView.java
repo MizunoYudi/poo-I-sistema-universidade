@@ -17,25 +17,28 @@ public class DisciplinaView {
 		
 		System.out.print("Digite o codigo da disciplina: ");
 		int codigo = sc.nextInt();
+		sc.nextLine();
 		
 		
 		System.out.print("Digite a carga horaria do curso");
 		int cargaHoraria = sc.nextInt();
+		sc.nextLine();
 		
 		return new DisciplinaObrigatoria(nome, codigo, cargaHoraria);
 	}
 	
 	public DisciplinaEletiva lerDadosDisciplinaEletiva() {
-		System.out.print("\n");
 		System.out.print("Digite o nome da disciplina: ");
 		String nome = sc.nextLine();
 		
 		System.out.print("Digite o codigo da disciplina: ");
 		int codigo = sc.nextInt();
+		sc.nextLine();
 		
 		
 		System.out.print("Digite a carga horaria do curso");
 		int cargaHoraria = sc.nextInt();
+		sc.nextLine();
 		
 		return new DisciplinaEletiva(nome, codigo, cargaHoraria);
 	}
@@ -77,5 +80,14 @@ public class DisciplinaView {
 	public int buscarDisciplina() {
 		System.out.print("Digite o codigo da disciplina: ");
 		return sc.nextInt();
+	}
+	
+	public boolean removerProfessor() {
+		System.out.print("Deseja remover o professor da materia? [Digite s para remover]");
+		if(sc.nextLine().equals("s")) {
+			return true;
+		}
+		return false;
+		
 	}
 }

@@ -4,6 +4,7 @@ import model.Disciplina;
 import model.DisciplinaObrigatoria;
 import model.DisciplinaEletiva;
 import model.Professor;
+import model.Aluno;
 import view.DisciplinaView;
 import repository.DisciplinaRepository;
 
@@ -29,21 +30,30 @@ public class DisciplinaController {
 		vw.listarDisciplinas(rep.listar());
 	}
 	
-	public void listarAlunos() {
-		Disciplina d = rep.getByCodigo(vw.getCodigo());
+	public void listarAlunosDisciplina() {
+		Disciplina d = rep.getByCodigo(vw.buscarDisciplina());
 		vw.listarAlunosDisciplina(d);
 	}
 	
 	public void removerDisciplina() {
-		Disciplina d = rep.getByCodigo(vw.getCodigo());
+		Disciplina d = rep.getByCodigo(vw.buscarDisciplina());
 		//Implementar escolha de delecao das disciplinas quando ha alunos e professor matriculados
 		rep.rmv(d);
 	}
 	
-	public void removerDisciplinaProfessor() {
-		Disciplina d = rep.getByCodigo(vw.getCodigo());
+	public void adicionarAluno( Aluno a) {
+		Disciplina d = buscarDisciplinaPorCodigo();
+		d.
+	}
+	
+	public void removerDisciplinaProfessor(Professor p) {
+		Disciplina d = rep.getByCodigo(vw.buscarDisciplina());
 		if(vw.removerProfessor()) {
 			d.setProfessor(null);
 		}
+	}
+	
+	public Disciplina buscarDisciplinaPorCodigo() { 
+		return rep.getByCodigo(vw.buscarDisciplina());
 	}
 }
